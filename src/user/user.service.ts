@@ -26,6 +26,7 @@ export class UserService {
   }
 
   findAll() {
+    
     const users = this.userModel.find().exec();
     if (!users) throw new NotFoundException();
     return users;
